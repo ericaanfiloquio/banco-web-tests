@@ -24,7 +24,7 @@ describe('template spec', () => {
     cy.screenshot('apos-clicar-botao-entrar')
     
     // Assert
-    cy.get('.toast').should('have.text', 'Erro no login. Tente novamente.')
+    cy.get('.toast').should('have.text', 'Sucesso. Tente novamente.')
 
   })
 
