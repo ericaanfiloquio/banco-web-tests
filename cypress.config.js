@@ -4,7 +4,7 @@ module.exports = defineConfig({
   allowCypressEnv: false,
 
   e2e: {
-    video: true,
+    video: false,
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
