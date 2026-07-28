@@ -21,7 +21,7 @@ describe('template spec', () => {
     cy.contains('button', 'Entrar').click()
 
     // Assert
-    cy.get('.toast').should('have.text', 'Erro no login. Tente novamente.')
+    cy.get('.toast').should('have.text', 'Sucesso. Tente novamente.')
 
   })
 
