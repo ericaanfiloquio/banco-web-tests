@@ -1,10 +1,14 @@
 describe('template spec', () => {
   beforeEach(() => {
     // é preciso ter para os testes: Arrange + Act + Assert: estruturar o início, colocar as ações, e fazer asserção, confirmar que o resultado está correto
-    cy.visit('http://localhost:4000')
+    cy.visit(Cypress.expose('localUrl'))
     cy.screenshot('apos-visitar-pagina')
   })
 
+  it('debug expose', () => {
+  console.log(Cypress.expose())
+  console.log(Cypress.expose('prodUrl'))
+})
 
   it('Login com dados validos deve permitir entrada no sistema', () => {
     cy.fixture('credenciais').then(credenciais => { 
