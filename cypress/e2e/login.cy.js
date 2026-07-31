@@ -1,7 +1,7 @@
 describe('template spec', () => {
   beforeEach(() => {
     // é preciso ter para os testes: Arrange + Act + Assert: estruturar o início, colocar as ações, e fazer asserção, confirmar que o resultado está correto
-    cy.visit(Cypress.expose('localUrl'))
+    cy.visit('/')
     cy.screenshot('apos-visitar-pagina')
   })
 

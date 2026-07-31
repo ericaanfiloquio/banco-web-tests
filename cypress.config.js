@@ -8,6 +8,7 @@ module.exports = defineConfig({
    prodUrl: "https://www.juliodelima.com.br",
 },
   e2e: {
+    baseUrl: 'http://localhost:4000',
     video: false,
     setupNodeEvents(on, config) {
       // implement node event listeners here
