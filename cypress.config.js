@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   allowCypressEnv: false,
 
-  expose: { 
+  expose: { // since I have baseUrl, I do not need the Cypress.expose
    localUrl: "http://localhost:4000",
    prodUrl: "https://www.juliodelima.com.br",
 },
