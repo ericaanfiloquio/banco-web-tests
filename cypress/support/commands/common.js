@@ -1,4 +1,4 @@
-Cypress.Commands.add('verifyToastMessage', mensagem => {
+Cypress.Commands.add('verificarToast', mensagem => {
     cy.get('.toast').should('have.text', mensagem)
 })
 

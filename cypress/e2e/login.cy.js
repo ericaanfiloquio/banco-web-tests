@@ -24,7 +24,7 @@ describe('template spec', () => {
     cy.screenshot('apos-clicar-botao-entrar')
     
     // Assert
-    cy.verifyToastMessage('Erro no login. Tente novamente.')
+    cy.verificarToast('Erro no login. Tente novamente.')
   })
 
   
