@@ -11,11 +11,7 @@ describe('template spec', () => {
 })
 
   it('Login com dados validos deve permitir entrada no sistema', () => {
-    cy.fixture('credenciais').then(credenciais => { 
-      cy.get('#username').click().type(credenciais.valida.usuario)
-      cy.get('#senha').click().type(credenciais.valida.senha)
-    })
-    cy.contains('button', 'Entrar').click()
+    cy.loginValidCredentials()
     cy.screenshot('apos-preencher-dados-validos')
 
     cy.contains('h4', 'Realizar Transferência').should('be.visible')
@@ -24,16 +20,11 @@ describe('template spec', () => {
 
     it('Login com dados invalidos deve apresentar mensagem de erro', () => {
     // Act
-    cy.fixture('credenciais').then(credenciais => {
-      cy.get('#username').click().type(credenciais.invalida.usuario)
-      cy.get('#senha').click().type(credenciais.invalida.senha)
-    })
-    cy.contains('button', 'Entrar').click()
+    cy.loginInvalidCredentials()
     cy.screenshot('apos-clicar-botao-entrar')
     
     // Assert
-    cy.get('.toast').should('have.text', 'Erro no login. Tente novamente.')
-
+    cy.verifyToastMessage('Erro no login. Tente novamente.')
   })
 
   
